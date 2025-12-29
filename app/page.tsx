@@ -1,6 +1,7 @@
 import CallToAction from "@/components/call-to-action";
 import FeaturesSection from "@/components/features-8";
 import FooterSection from "@/components/footer";
+import FooterEnd from "@/components/footer-end";
 import HeroSection from "@/components/hero-section";
 import IntegrationsSection from "@/components/integrations-8";
 import Pricing from "@/components/pricing";
@@ -15,7 +16,8 @@ export default function Home() {
       <Testimonials />
       <Pricing />
       <CallToAction />
-      <FooterSection />
+      <FooterEnd />
+      {/* <FooterSection /> */}
     </div>
   );
 }
