@@ -22,7 +22,7 @@ export default function CallToAction() {
                             asChild
                             size="lg"
                             variant="outline">
-                            <Link href="https://cal.com/shaan-steakhouse/30min">
+                            <Link href="https://calendly.com/sam-nimbushq/30min">
                                 <span>Contact Sales</span>
                             </Link>
                         </Button>

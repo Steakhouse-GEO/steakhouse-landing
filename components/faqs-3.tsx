@@ -55,7 +55,7 @@ export default function FAQsThree() {
                             <p className="text-muted-foreground mt-4">
                                 Can&apos;t find what you&apos;re looking for? Contact our{' '}
                                 <Link
-                                    href="#"
+                                    href="https://calendly.com/sam-nimbushq/30min"
                                     className="text-primary font-medium hover:underline">
                                     customer support team
                                 </Link>

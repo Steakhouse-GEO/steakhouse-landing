@@ -64,7 +64,7 @@ export default function Pricing() {
                                 <Button
                                     asChild
                                     className="w-full">
-                                    <Link href="https://cal.com/shaan-steakhouse/30min">Contact Sales</Link>
+                                    <Link href="https://calendly.com/sam-nimbushq/30min">Contact Sales</Link>
                                 </Button>
                             </div>
 

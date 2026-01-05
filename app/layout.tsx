@@ -133,7 +133,7 @@ export default function RootLayout({
         "@type": "ListItem",
         "position": 4,
         "name": "Contact Us",
-        "item": "https://cal.com/shaan-steakhouse/30min"
+        "item": "https://calendly.com/sam-nimbushq/30min"
       }
     ]
   };
