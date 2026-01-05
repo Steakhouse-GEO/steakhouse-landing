@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import localFont from "next/font/local";
+import Script from "next/script";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -156,11 +157,11 @@ export default function RootLayout({
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/gh/dheereshag/coloured-icons@1.9.6/app/ci.min.css"
         />
-        <script src="https://cdn.jsdelivr.net/gh/dheereshag/coloured-icons@1.9.6/app/ci.min.js"></script>
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${nimbusRom.variable} dark antialiased`}
       >
+        <Script src="https://cdn.jsdelivr.net/gh/dheereshag/coloured-icons@1.9.6/app/ci.min.js" strategy="afterInteractive" />
         {children}
       </body>
     </html>

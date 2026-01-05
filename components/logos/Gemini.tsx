@@ -1,6 +1,4 @@
-import { type SVGProps } from 'react'
-
-export default function Gemini(props: SVGProps<SVGSVGElement>) {
+export default function Gemini() {
     return (
         <i className="ci ci-linkedin"></i>
         // <svg

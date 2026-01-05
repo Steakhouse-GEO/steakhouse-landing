@@ -1,9 +1,7 @@
 'use client';
 import { motion } from 'motion/react'
 
-type Props = {}
-
-const FooterEnd = (props: Props) => {
+const FooterEnd = () => {
     return (
         <section className="h-96 flex items-end relative justify-center w-full p-8">
             <motion.h1

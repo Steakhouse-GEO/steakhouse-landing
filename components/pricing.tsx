@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button'
-import { Check, Cross, X } from 'lucide-react'
+import { Check, X } from 'lucide-react'
 import Link from 'next/link'
 
 export default function Pricing() {
@@ -12,7 +12,7 @@ export default function Pricing() {
                 </div>
 
                 <div className="mt-8 grid gap-6 md:mt-20 md:grid-cols-5 md:gap-0">
-                    <div className="rounded-(--radius) flex flex-col justify-between space-y-8 border p-6 md:col-span-2 md:my-2 md:rounded-r-none md:border-r-0 lg:p-10">
+                    <div className="rounded-lg flex flex-col justify-between space-y-8 border p-6 md:col-span-2 md:my-2 md:rounded-r-none md:border-r-0 lg:p-10">
                         <div className="space-y-4">
                             <div>
                                 <h2 className="font-medium">Free</h2>
@@ -52,7 +52,7 @@ export default function Pricing() {
                         </div>
                     </div>
 
-                    <div className="dark:bg-muted rounded-(--radius) border p-6 shadow-lg shadow-gray-950/5 md:col-span-3 lg:p-10 dark:[--color-muted:var(--color-zinc-900)]">
+                    <div className="dark:bg-muted rounded-lg border p-6 shadow-lg shadow-gray-950/5 md:col-span-3 lg:p-10 dark:[--color-muted:var(--color-zinc-900)]">
                         <div className="grid gap-6 sm:grid-cols-2">
                             <div className="space-y-4">
                                 <div>

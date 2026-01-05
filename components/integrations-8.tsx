@@ -1,4 +1,3 @@
-import { Gemini, Replit, GooglePaLM, MagicUI, VSCodium, MediaWiki } from '@/components/logos'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 
@@ -10,7 +9,7 @@ export default function IntegrationsSection() {
                     <div className="order-last mt-6 flex flex-col gap-12 md:order-first">
                         <div className="space-y-6">
                             <h2 className="text-balance text-3xl font-semibold md:text-4xl lg:text-5xl">Integrates seamlessly with platforms that matter</h2>
-                            <p className="text-muted-foreground">The extension automatically identifies which social platform you're on and generates optimized content accordingly.</p>
+                            <p className="text-muted-foreground">The extension automatically identifies which social platform you&apos;re on and generates optimized content accordingly.</p>
                             <Button
                                 variant="outline"
                                 size="sm"
