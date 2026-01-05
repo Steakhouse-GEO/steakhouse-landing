@@ -10,6 +10,16 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  rewrites: () => [
+    {
+      source: '/blog',
+      destination: 'https://blog.trysteakhouse.com',
+    },
+    {
+      source: '/blog/:path*',
+      destination: 'https://blog.trysteakhouse.com/:path*',
+    },
+  ],
 };
 
 export default nextConfig;
