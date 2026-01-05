@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button'
-import { Check } from 'lucide-react'
+import { Check, Cross, X } from 'lucide-react'
 import Link from 'next/link'
 
 export default function Pricing() {
@@ -24,17 +24,27 @@ export default function Pricing() {
                                 asChild
                                 variant="outline"
                                 className="w-full">
-                                <Link href="">Get Started</Link>
+                                <Link href="">Download Extension</Link>
                             </Button>
 
                             <hr className="border-dashed" />
 
                             <ul className="list-outside space-y-3 text-sm">
-                                {['Basic Analytics Dashboard', '5GB Cloud Storage', 'Email and Chat Support'].map((item, index) => (
+                                {['20 credits per month', 'Limited Content Generation', 'Limited Optimization', 'Markdown Support'].map((item, index) => (
                                     <li
                                         key={index}
                                         className="flex items-center gap-2">
                                         <Check className="size-3" />
+                                        {item}
+                                    </li>
+                                ))}
+                            </ul>
+                            <ul className="list-outside text-red-500 space-y-3 text-sm">
+                                {['Blog Automation', 'Choose your Model', 'Emojis, Hashtags, and more', 'Platform Specific Formatting'].map((item, index) => (
+                                    <li
+                                        key={index}
+                                        className="flex items-center gap-2">
+                                        <X className="size-3" />
                                         {item}
                                     </li>
                                 ))}
@@ -47,22 +57,24 @@ export default function Pricing() {
                             <div className="space-y-4">
                                 <div>
                                     <h2 className="font-medium">Pro</h2>
-                                    <span className="my-3 block text-2xl font-semibold">$19 / mo</span>
+                                    <span className="my-3 block text-2xl font-semibold">$29 / mo</span>
                                     <p className="text-muted-foreground text-sm">Per editor</p>
                                 </div>
 
                                 <Button
                                     asChild
                                     className="w-full">
-                                    <Link href="">Get Started</Link>
+                                    <Link href="https://cal.com/shaan-steakhouse/30min">Contact Sales</Link>
                                 </Button>
                             </div>
 
                             <div>
                                 <div className="text-sm font-medium">Everything in free plus :</div>
 
-                                <ul className="mt-4 list-outside space-y-3 text-sm">
-                                    {['Everything in Free Plan', '5GB Cloud Storage', 'Email and Chat Support', 'Access to Community Forum', 'Single User Access', 'Access to Basic Templates', 'Mobile App Access', '1 Custom Report Per Month', 'Monthly Product Updates', 'Standard Security Features'].map((item, index) => (
+                                <ul className="mt-4 list-outside text-green-500 space-y-3 text-sm">
+                                    {[
+                                        '300 credits per month', 'Unlimited Content Generation', 'Unlimited Optimization', 'Markdown Support', 'Blog Automation', 'Choose your Model', 'Emojis, Hashtags, and more', 'Platform Specific Formatting', 'Priority Support'
+                                    ].map((item, index) => (
                                         <li
                                             key={index}
                                             className="flex items-center gap-2">

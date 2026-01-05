@@ -1,6 +1,8 @@
-import React from 'react'
+'use client';
+
+import React, { useState } from 'react'
 import Link from 'next/link'
-import { ArrowRight, ChevronRight } from 'lucide-react'
+import { ArrowRight, BadgePlusIcon, ChevronRight, PuzzleIcon } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import Image from 'next/image'
 import { TextEffect } from '@/components/motion-primitives/text-effect'
@@ -29,6 +31,10 @@ const transitionVariants: { item: Variants } = {
 }
 
 export default function HeroSection() {
+    const [isPlaying, setIsPlaying] = useState(false);
+    const handlePlay = () => {
+        setIsPlaying(true);
+    }
     return (
         <>
             <HeroHeader />
@@ -88,19 +94,8 @@ export default function HeroSection() {
                                     <Link
                                         href="#link"
                                         className="hover:bg-background dark:hover:border-t-border bg-muted group mx-auto flex w-fit items-center gap-4 rounded-full border p-1 px-4 shadow-md shadow-zinc-950/5 transition-colors duration-300 dark:border-t-white/5 dark:shadow-zinc-950">
+                                        <div className='size-2 rounded-full bg-green-500 animate-pulse' />
                                         <span className="text-foreground text-sm">Extension Now Live on Chrome Web Store</span>
-                                        {/* <span className="dark:border-background block h-4 w-0.5 border-l bg-white dark:bg-zinc-700"></span> */}
-
-                                        {/* <div className="bg-background group-hover:bg-muted size-6 overflow-hidden rounded-full duration-500">
-                                            <div className="flex w-12 -translate-x-1/2 duration-500 ease-in-out group-hover:translate-x-0">
-                                                <span className="flex size-6">
-                                                    <ArrowRight className="m-auto size-3" />
-                                                </span>
-                                                <span className="flex size-6">
-                                                    <ArrowRight className="m-auto size-3" />
-                                                </span>
-                                            </div>
-                                        </div> */}
                                     </Link>
                                 </AnimatedGroup>
 
@@ -108,8 +103,8 @@ export default function HeroSection() {
                                     preset="fade-in-blur"
                                     speedSegment={0.3}
                                     as="h1"
-                                    className="mx-auto mt-8 max-w-4xl text-balance text-5xl max-md:font-semibold md:text-7xl lg:mt-16 xl:text-[5.25rem]">
-                                    Modern Solutions for Customer Engagement
+                                    className="mx-auto mt-8 max-w-4xl text-balance text-4xl md:text-7xl lg:mt-16 xl:text-[5.25rem] font-serif font-light">
+                                    Thoughtful Content Stack for Thoughtless Creation
                                 </TextEffect>
                                 <TextEffect
                                     per="line"
@@ -118,7 +113,7 @@ export default function HeroSection() {
                                     delay={0.5}
                                     as="p"
                                     className="mx-auto mt-8 max-w-2xl text-balance text-lg">
-                                    Highly customizable components for building modern websites and applications that look and feel the way you mean it.
+                                    High-growth teams use SteakHouse to auto-generate, structure, and publish optimized content at the click of a button
                                 </TextEffect>
 
                                 <AnimatedGroup
@@ -141,8 +136,9 @@ export default function HeroSection() {
                                             asChild
                                             size="lg"
                                             className="rounded-xl px-5 text-base">
-                                            <Link href="#link">
-                                                <span className="text-nowrap">Start Building</span>
+                                            <Link href="#">
+                                                <PuzzleIcon className="mr-1 h-4 w-4" />
+                                                <span>Download Extension</span>
                                             </Link>
                                         </Button>
                                     </div>
@@ -153,7 +149,8 @@ export default function HeroSection() {
                                         variant="ghost"
                                         className="h-10.5 rounded-xl px-5">
                                         <Link href="#link">
-                                            <span className="text-nowrap">Request a demo</span>
+                                            <BadgePlusIcon className="mr-1 h-4 w-4" />
+                                            <span className="text-nowrap">Sign up for Blog Automation</span>
                                         </Link>
                                     </Button>
                                 </AnimatedGroup>
@@ -173,21 +170,51 @@ export default function HeroSection() {
                                 ...transitionVariants,
                             }}>
                             <div className="mask-b-from-55% relative -mr-56 mt-8 overflow-hidden px-2 sm:mr-0 sm:mt-12 md:mt-20">
-                                <div className="inset-shadow-2xs ring-background dark:inset-shadow-white/20 bg-background relative mx-auto max-w-6xl overflow-hidden rounded-2xl border p-4 shadow-lg shadow-zinc-950/15 ring-1">
-                                    <Image
-                                        className="bg-background aspect-15/8 relative hidden rounded-2xl dark:block"
-                                        src="/mail2.png"
-                                        alt="app screen"
-                                        width="2700"
-                                        height="1440"
-                                    />
-                                    <Image
-                                        className="z-2 border-border/25 aspect-15/8 relative rounded-2xl border dark:hidden"
-                                        src="/mail2-light.png"
-                                        alt="app screen"
-                                        width="2700"
-                                        height="1440"
-                                    />
+                                <div className="inset-shadow-2xs ring-background dark:inset-shadow-white/20 bg-background relative mx-auto max-w-6xl overflow-hidden rounded-2xl border shadow-lg shadow-zinc-950/15 ring-1">
+                                    <div className="aspect-video relative overflow-hidden rounded-xl bg-zinc-900/50">
+                                        {!isPlaying ? (
+                                            <>
+                                                {/* Abstract background for the video preview */}
+                                                <div className="absolute inset-0 bg-linear-to-tr from-zinc-950 via-zinc-900 to-zinc-950" />
+
+                                                {/* Animated gradient orbs for a premium feel */}
+                                                <div className="absolute -top-24 -right-24 size-96 bg-[radial-gradient(circle,rgba(103,76,244,0.1)_0%,transparent_70%)] blur-3xl animate-pulse" />
+                                                <div className="absolute -bottom-24 -left-24 size-96 bg-[radial-gradient(circle,rgba(255,255,255,0.03)_0%,transparent_70%)] blur-3xl" />
+                                                {/* Grid pattern overlay */}
+                                                <video
+                                                    src="/demo.mp4"
+                                                    className="absolute inset-0 size-full object-cover"
+                                                />
+                                                <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-overlay" />
+
+                                                {/* Play Button Overlay */}
+                                                <div
+                                                    onClick={handlePlay}
+                                                    className="absolute inset-0 flex items-center justify-center group cursor-pointer z-10"
+                                                >
+                                                    <div className="size-20 rounded-full bg-white/5 backdrop-blur-xl border border-white/10 flex items-center justify-center transition-all duration-500 group-hover:scale-110 group-hover:bg-white/10">
+                                                        <div className="size-14 rounded-full bg-white flex items-center justify-center shadow-[0_0_30px_rgba(255,255,255,0.3)] transition-transform duration-300 group-active:scale-95">
+                                                            <div className="w-0 h-0 border-t-8 border-t-transparent border-l-14 border-l-zinc-950 border-b-8 border-b-transparent ml-1" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                {/* Labels */}
+                                                <div className="absolute top-6 right-6 flex items-center gap-3 z-10">
+                                                    <div className="flex items-center gap-2 bg-black/60 backdrop-blur-md px-3.5 py-2 rounded-full border border-white/10 shadow-2xl">
+                                                        <div className="size-2 rounded-full bg-[#674cf4] animate-pulse shadow-[0_0_8px_#674cf4]" />
+                                                        <span className="text-[10px] font-bold text-white uppercase tracking-[0.2em]">Product Demo</span>
+                                                    </div>
+                                                </div>
+                                            </>) : (
+                                            <video
+                                                src="/demo.mp4"
+                                                controls
+                                                autoPlay
+                                                className="absolute inset-0 size-full object-cover"
+                                            />
+                                        )}
+                                    </div>
                                 </div>
                             </div>
                         </AnimatedGroup>
